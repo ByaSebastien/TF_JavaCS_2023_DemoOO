@@ -7,8 +7,8 @@ public class Animal {
 
     public static int nbAnimals = 0;
 
-    public String name = "Gerard";
-    public String color;
+    private String name = "Gerard";
+    private String color;
     private List<String> habits;
 
     public Animal(){
@@ -26,6 +26,37 @@ public class Animal {
         //Appel du constructeur new Animal(String name)
         this(name);
         this.color = color;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public void setName(String name){
+        if(name.trim().isEmpty()){
+            return;
+        }
+        this.name = name;
+    }
+
+    public String getColor(){
+        return this.color;
+    }
+
+    public void setColor(String color){
+        this.color = color;
+    }
+
+    public List<String> getHabits(){
+        return List.copyOf(this.habits);
+    }
+
+    public void addHabit(String habit){
+        this.habits.add(habit);
+    }
+
+    public void remove(String habit){
+        this.habits.remove(habit);
     }
 
     public void roar(){
