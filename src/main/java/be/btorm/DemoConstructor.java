@@ -2,10 +2,9 @@ package be.btorm;
 
 import be.btorm.models.Animal;
 
-public class Main {
+public class DemoConstructor {
     public static void main(String[] args) {
 
-        //region Demo Constructeur
         //Constructeur vide
         Animal a = new Animal();
 //        a.name = "Gilbert";
@@ -28,9 +27,10 @@ public class Main {
         System.out.println(a3.color);
         a3.roar();
 
-        //Attention a ne pas essayer d'acceder a des methodes ou des proprieté sur un objet null
+//        Attention a ne pas essayer d'acceder a des methodes ou des proprieté sur un objet null
 //        Animal aNull;
 //        aNull.name;
-        //endregion
+
+
     }
 }
